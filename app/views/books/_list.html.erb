@@ -10,10 +10,22 @@
      	    	<%= user.name %>
      	    </td>
  	    </tr>
-        <tr>
+        
+	  	  	   <tr>
 	  	  	    <th>introduction</th>
 	  	  	    <td>
 	  	  		    <%= user.introduction %>
+	  	  	    </td>
+	  	  	    <tr>
+	  	  	    <th>follows</th>
+	  	  	    <td>
+	  	  		    <%= link_to user.followings.count , followings_user_path(user.id) %>
+	  	  	    </td>
+	  	  	    </tr>
+	  	  	    <tr>
+	  	  	    <th>followers</th>
+	  	  	    <td>
+	  	  		    <%= link_to user.followers.count , followers_user_path(user.id) %>
 	  	  	    </td>
   	    </tr>
 	</table>
